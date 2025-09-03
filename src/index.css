@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system para aplicação de controle de gastos */
+
+@layer base {
+  :root {
+    /* Cores principais */
+    --background: 0 0% 10%;          /* #1A1A1A */
+    --foreground: 0 0% 100%;         /* Branco */
+
+    --card: 0 0% 17%;                /* #2C2C2C */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 17%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 157 100% 50%;         /* #00FFA3 - Verde vibrante */
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 157 100% 50%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 25%;
+    --input: 0 0% 20%;
+    --ring: 157 100% 50%;
+
+    --success: 157 100% 50%;
+    --warning: 45 100% 50%;
+    --info: 220 100% 60%;
+
+    --radius: 0.75rem;
+
+    /* Gradientes */
+    --gradient-primary: linear-gradient(135deg, hsl(157 100% 50%), hsl(157 100% 40%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 17%), hsl(0 0% 19%));
+    --gradient-success: linear-gradient(135deg, hsl(157 100% 50%), hsl(157 80% 45%));
+
+    /* Sombras */
+    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-primary: 0 4px 20px hsl(157 100% 50% / 0.3);
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 157 100% 50%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 157 100% 50%;
+  }
+
+  /* Modo claro (se necessário) */
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 10%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
